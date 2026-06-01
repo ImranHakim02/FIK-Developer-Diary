@@ -15,29 +15,34 @@ header {
     color: #fff;
     padding: 1.5rem 1rem;
     text-align: center;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 nav {
-    margin-top: 10px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
 }
 
 nav a {
     color: #fff;
     text-decoration: none;
-    margin: 0 12px;
     font-weight: bold;
+    padding: 5px 10px;
     display: inline-block;
 }
 
 main {
-    width: 100%;
-    max-width: 850px; /* Perfect readability constraints */
-    margin: 20px auto;
-    padding: 30px 20px;
+    width: 90%; /* Leaves safety margins on mobile screens */
+    max-width: 850px; 
+    margin: 20px auto; /* Centers the content block perfectly */
+    padding: 25px 20px;
     background: #fff;
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     border-radius: 8px;
-    box-sizing: border-box; /* Crucial for preventing mobile padding blowout */
+    box-sizing: border-box; /* Forces padding to stay inside constraints */
 }
 
 footer {
@@ -52,13 +57,13 @@ section {
 }
 
 /* ==========================================================================
-   2. IMAGE & MEDIA RESPONSIVENESS (Fixes Mobile Layout Crashing)
+   2. IMAGE & MEDIA RESPONSIVENESS (Fluid Grid Protection)
    ========================================================================== */
-/* Global rule: Prevents media items from stretching wider than the phone screen */
 img, video {
     max-width: 100%;
     height: auto;
     display: block;
+    margin: 0 auto;
 }
 
 .profile-pic {
@@ -70,7 +75,6 @@ img, video {
     border: 3px solid #003366;
 }
 
-/* Base rules for media assets - max-width keeps them fluid on small screens */
 .university-logo-unisza {
     width: 100%;
     max-width: 600px;       
@@ -103,7 +107,7 @@ img, video {
 }
 
 /* ==========================================================================
-   3. COMPONENTS (Form Controls, Blog Elements, Skill Tags)
+   3. COMPONENTS
    ========================================================================== */
 .post-preview {
     border-bottom: 1px solid #ddd;
@@ -180,35 +184,43 @@ img, video {
 }
 
 /* ==========================================================================
-   4. MEDIA QUERIES (Responsive Fluid Layout Engine)
+   4. MEDIA QUERIES (Responsive Layout Adjustments)
    ========================================================================== */
 
-/* Tablet Optimization (768px down) */
+/* Tablet Viewports */
 @media (max-width: 768px) {
     main {
-        margin: 10px;
+        width: 95%;
+        margin: 10px auto;
         padding: 20px;
     }
 }
 
-/* Mobile Phone Optimization (600px down) */
+/* Mobile Phone Viewports */
 @media (max-width: 600px) {
     nav {
-        display: flex;
         flex-direction: column;
         gap: 8px;
+        align-items: center;
     }
 
     nav a {
-        margin: 0;
+        width: 90%;
+        max-width: 280px;
         background: rgba(255, 255, 255, 0.1);
-        padding: 8px;
+        padding: 10px;
         border-radius: 4px;
         text-align: center;
+        margin: 0;
     }
 
     header h1 {
         font-size: 1.6rem;
+    }
+
+    main {
+        width: 92%;
+        padding: 15px;
     }
 
     .submit-btn {
