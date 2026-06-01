@@ -1,0 +1,329 @@
+/* General Styles */
+.profile-pic {
+    width: 250px;       
+    height: 250px;
+    border-radius: 50%; 
+    object-fit: cover;  
+    display: block;
+    margin: 20px auto;  
+    border: 3px solid #003366;
+}
+
+/* ==========================================
+   1. Base & Layout Styles (Desktop First)
+   ========================================== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f4f4f9;
+}
+
+header {
+    background: #003366; /* UniSZA Blue */
+    color: #fff;
+    padding: 1.5rem 1rem;
+    text-align: center;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+    display: inline-block; /* Prevents awkward link wrapping */
+}
+
+main {
+    padding: 30px 20px;
+    max-width: 850px; /* Limits width on big screens for readability */
+    margin: 20px auto;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    border-radius: 8px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.85rem;
+    color: #777;
+}
+
+/* Base Form Controls */
+.form-group input, 
+.form-group textarea {
+    width: 100%; /* Spans full width of container */
+    box-sizing: border-box; /* Fixes padding overflow issues */
+}
+
+/* ==========================================
+   2. Tablet Viewports (Screens under 768px)
+   ========================================== */
+@media (max-width: 768px) {
+    main {
+        margin: 10px; /* Reduces outer margin so content fills the tablet space */
+        padding: 20px;
+    }
+}
+
+/* ==========================================
+   3. Mobile Phone Viewports (Screens under 480px)
+   ========================================== */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem; /* Shrinks large headers so they don't break lines awkwardly */
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column; /* Stack navigation links vertically on phones */
+        gap: 12px;
+    }
+
+    nav a {
+        margin: 0;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 8px;
+        border-radius: 4px;
+    }
+
+    /* Makes the Send Message button full-width on mobile phones */
+    .submit-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    color: #333;
+    background-color: #f4f4f9;
+}
+
+header {
+    background: #003366;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.8rem;
+    color: #777;
+}
+
+/* Blog Post Styling */
+.post-preview {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+.skill-tags span {
+    display: inline-block;
+    background-color: #003366;
+    color: white;
+    padding: 5px 12px;
+    margin: 5px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+.university-logo-unisza{
+    width: 600px;       
+    height: 200px;
+    display: block;
+    margin: 20px auto;  
+    border: 3px solid #003366;
+}
+
+.university-logo-utem{
+    width: 450px;       
+    height: 200px;
+    display: block;
+    object-fit: contain;
+    margin: 20px auto;  
+    border: 3px solid #003366;
+}
+
+.techskill-pic {
+    width: 325px;       
+    height: 170px;
+    display: block;
+    object-fit: contain;
+    margin: 20px auto;  
+    border: 3px solid #003366;
+}
+
+.softskill-pic {
+    width: 275px;       
+    height: 158px;
+    display: block;
+    object-fit: contain;
+    margin: 20px auto;  
+    border: 3px solid #003366;
+}
+
+.ucreds-logo {
+    width: 300px;       
+    height: 100px;
+    display: block;
+    object-fit: contain;
+    margin: 20px 20px 20px 0;
+    border: 3px solid #003366;
+}
+
+.ucreds-ss {
+    width: 375px;       
+    height: 300px;
+    display: block;
+    object-fit: contain;
+    margin: 20px 20px 20px 0;
+    border: 3px solid #003366;
+}
+
+.ARMicroLearn-video {
+    width: 175px;
+    height: 175px;
+    height: auto;
+    margin: 20px 0;
+    border: 3px solid #003366;
+}
+
+.ARMicroLearn-ss {
+    width: 400px;       
+    height: 300px;
+    display: block;
+    object-fit: contain;
+    margin: 10px 20px 10px 0;
+    border: 3px solid #003366;
+}
+
+.gym-ss {
+    width: 425px;
+    height: 300px;
+    display: block;
+    object-fit: contain;
+    margin: 10px 20px 10px 0;
+    border: 3px solid #003366;
+}
+
+.calculator-ss {
+    width: 400px;
+    height: 300px;
+    display: block;
+    object-fit: contain;
+    margin: 10px 20px 10px 0;
+    border: 3px solid #003366;
+}
+
+.password-generator-ss {
+    width: 400px;
+    height: 300px;
+    display: block;
+    object-fit: contain;
+    margin: 10px 20px 10px 0;
+    border: 3px solid #003366;
+}
+
+/* Contact Form Layout */
+.contact-form-section {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 2px solid #eee;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #003366; /* UniSZA Blue theme color */
+}
+
+.form-group input, 
+.form-group textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    border-color: #003366;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 51, 102, 0.2);
+}
+
+.submit-btn {
+    background-color: #003366;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    align-self: flex-start;
+}
+
+.submit-btn:hover {
+    background-color: #002244;
+}
+
+/* Mobile adjust for full width button */
+@media (max-width: 600px) {
+    .submit-btn {
+        width: 100%;
+        align-self: stretch;
+    }
+}
