@@ -40,6 +40,28 @@ nav a {
     display: inline-block; /* Prevents awkward link wrapping */
 }
 
+/* 1. Make sure container boxes shrink to fit mobile screens */
+main {
+    width: 100%;       /* Spans full width on small screens */
+    max-width: 800px;  /* Stops growing on large desktop screens */
+    margin: 0 auto;    /* Centers the layout container */
+    padding: 15px;     /* Leaves comfortable breathing room at the edges */
+    box-sizing: border-box; /* Includes padding in total width calculation */
+}
+
+/* 2. Prevent images or screenshots from breaking the grid layout */
+img, video {
+    max-width: 100%;   /* Scale down safely if the screen gets narrower */
+    height: auto;      /* Keeps the original aspect ratio proportional */
+    display: block;
+}
+
+/* 3. Make form fields and inputs fluid */
+input, textarea {
+    width: 100%;       /* Stretches inputs cleanly to edge-to-edge container margins */
+    box-sizing: border-box;
+}
+
 main {
     padding: 30px 20px;
     max-width: 850px; /* Limits width on big screens for readability */
