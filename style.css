@@ -1,17 +1,6 @@
-/* General Styles */
-.profile-pic {
-    width: 250px;       
-    height: 250px;
-    border-radius: 50%; 
-    object-fit: cover;  
-    display: block;
-    margin: 20px auto;  
-    border: 3px solid #003366;
-}
-
-/* ==========================================
-   1. Base & Layout Styles (Desktop First)
-   ========================================== */
+/* ==========================================================================
+   1. GLOBAL & DESIGN SYSTEM STYLES
+   ========================================================================== */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
@@ -35,40 +24,20 @@ nav {
 nav a {
     color: #fff;
     text-decoration: none;
-    margin: 0 10px;
+    margin: 0 12px;
     font-weight: bold;
-    display: inline-block; /* Prevents awkward link wrapping */
-}
-
-/* 1. Make sure container boxes shrink to fit mobile screens */
-main {
-    width: 100%;       /* Spans full width on small screens */
-    max-width: 800px;  /* Stops growing on large desktop screens */
-    margin: 0 auto;    /* Centers the layout container */
-    padding: 15px;     /* Leaves comfortable breathing room at the edges */
-    box-sizing: border-box; /* Includes padding in total width calculation */
-}
-
-/* 2. Prevent images or screenshots from breaking the grid layout */
-img, video {
-    max-width: 100%;   /* Scale down safely if the screen gets narrower */
-    height: auto;      /* Keeps the original aspect ratio proportional */
-    display: block;
-}
-
-/* 3. Make form fields and inputs fluid */
-input, textarea {
-    width: 100%;       /* Stretches inputs cleanly to edge-to-edge container margins */
-    box-sizing: border-box;
+    display: inline-block;
 }
 
 main {
-    padding: 30px 20px;
-    max-width: 850px; /* Limits width on big screens for readability */
+    width: 100%;
+    max-width: 850px; /* Perfect readability constraints */
     margin: 20px auto;
+    padding: 30px 20px;
     background: #fff;
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     border-radius: 8px;
+    box-sizing: border-box; /* Crucial for preventing mobile padding blowout */
 }
 
 footer {
@@ -78,100 +47,67 @@ footer {
     color: #777;
 }
 
-/* Base Form Controls */
-.form-group input, 
-.form-group textarea {
-    width: 100%; /* Spans full width of container */
-    box-sizing: border-box; /* Fixes padding overflow issues */
+section {
+    margin-bottom: 30px;
 }
 
-/* ==========================================
-   2. Tablet Viewports (Screens under 768px)
-   ========================================== */
-@media (max-width: 768px) {
-    main {
-        margin: 10px; /* Reduces outer margin so content fills the tablet space */
-        padding: 20px;
-    }
+/* ==========================================================================
+   2. IMAGE & MEDIA RESPONSIVENESS (Fixes Mobile Layout Crashing)
+   ========================================================================== */
+/* Global rule: Prevents media items from stretching wider than the phone screen */
+img, video {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
-/* ==========================================
-   3. Mobile Phone Viewports (Screens under 480px)
-   ========================================== */
-@media (max-width: 480px) {
-    header h1 {
-        font-size: 1.5rem; /* Shrinks large headers so they don't break lines awkwardly */
-    }
-
-    nav {
-        display: flex;
-        flex-direction: column; /* Stack navigation links vertically on phones */
-        gap: 12px;
-    }
-
-    nav a {
-        margin: 0;
-        background: rgba(255, 255, 255, 0.1);
-        padding: 8px;
-        border-radius: 4px;
-    }
-
-    /* Makes the Send Message button full-width on mobile phones */
-    .submit-btn {
-        width: 100%;
-        text-align: center;
-    }
+.profile-pic {
+    width: 250px;       
+    height: 250px;
+    border-radius: 50%; 
+    object-fit: cover;  
+    margin: 20px auto;  
+    border: 3px solid #003366;
 }
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    color: #333;
-    background-color: #f4f4f9;
+/* Base rules for media assets - max-width keeps them fluid on small screens */
+.university-logo-unisza {
+    width: 100%;
+    max-width: 600px;       
+    margin: 20px auto;  
+    border: 3px solid #003366;
 }
 
-header {
-    background: #003366;
-    color: #fff;
-    padding: 1rem 0;
-    text-align: center;
+.university-logo-utem {
+    width: 100%;
+    max-width: 450px;       
+    object-fit: contain;
+    margin: 20px auto;  
+    border: 3px solid #003366;
 }
 
-nav a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
+.techskill-pic { width: 100%; max-width: 325px; object-fit: contain; margin: 20px auto; border: 3px solid #003366; }
+.softskill-pic { width: 100%; max-width: 275px; object-fit: contain; margin: 20px auto; border: 3px solid #003366; }
+.ucreds-logo    { width: 100%; max-width: 300px; object-fit: contain; margin: 20px auto; border: 3px solid #003366; }
+.ucreds-ss      { width: 100%; max-width: 375px; object-fit: contain; margin: 20px auto; border: 3px solid #003366; }
+.ARMicroLearn-ss{ width: 100%; max-width: 400px; object-fit: contain; margin: 20px auto; border: 3px solid #003366; }
+.gym-ss         { width: 100%; max-width: 425px; object-fit: contain; margin: 20px auto; border: 3px solid #003366; }
+.calculator-ss  { width: 100%; max-width: 400px; object-fit: contain; margin: 20px auto; border: 3px solid #003366; }
+.password-generator-ss { width: 100%; max-width: 400px; object-fit: contain; margin: 20px auto; border: 3px solid #003366; }
+
+.ARMicroLearn-video {
+    width: 100%;
+    max-width: 175px;
+    margin: 20px auto;
+    border: 3px solid #003366;
 }
 
-main {
-    padding: 20px;
-    max-width: 800px;
-    margin: auto;
-    background: #fff;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    font-size: 0.8rem;
-    color: #777;
-}
-
-/* Blog Post Styling */
+/* ==========================================================================
+   3. COMPONENTS (Form Controls, Blog Elements, Skill Tags)
+   ========================================================================== */
 .post-preview {
     border-bottom: 1px solid #ddd;
-    padding: 10px 0;
-}
-
-/* Mobile Responsiveness */
-@media (max-width: 600px) {
-    nav a {
-        display: block;
-        margin: 10px 0;
-    }
+    padding: 15px 0;
 }
 
 .skill-tags span {
@@ -184,108 +120,7 @@ footer {
     font-size: 0.9rem;
 }
 
-section {
-    margin-bottom: 30px;
-}
-
-.university-logo-unisza{
-    width: 600px;       
-    height: 200px;
-    display: block;
-    margin: 20px auto;  
-    border: 3px solid #003366;
-}
-
-.university-logo-utem{
-    width: 450px;       
-    height: 200px;
-    display: block;
-    object-fit: contain;
-    margin: 20px auto;  
-    border: 3px solid #003366;
-}
-
-.techskill-pic {
-    width: 325px;       
-    height: 170px;
-    display: block;
-    object-fit: contain;
-    margin: 20px auto;  
-    border: 3px solid #003366;
-}
-
-.softskill-pic {
-    width: 275px;       
-    height: 158px;
-    display: block;
-    object-fit: contain;
-    margin: 20px auto;  
-    border: 3px solid #003366;
-}
-
-.ucreds-logo {
-    width: 300px;       
-    height: 100px;
-    display: block;
-    object-fit: contain;
-    margin: 20px 20px 20px 0;
-    border: 3px solid #003366;
-}
-
-.ucreds-ss {
-    width: 375px;       
-    height: 300px;
-    display: block;
-    object-fit: contain;
-    margin: 20px 20px 20px 0;
-    border: 3px solid #003366;
-}
-
-.ARMicroLearn-video {
-    width: 175px;
-    height: 175px;
-    height: auto;
-    margin: 20px 0;
-    border: 3px solid #003366;
-}
-
-.ARMicroLearn-ss {
-    width: 400px;       
-    height: 300px;
-    display: block;
-    object-fit: contain;
-    margin: 10px 20px 10px 0;
-    border: 3px solid #003366;
-}
-
-.gym-ss {
-    width: 425px;
-    height: 300px;
-    display: block;
-    object-fit: contain;
-    margin: 10px 20px 10px 0;
-    border: 3px solid #003366;
-}
-
-.calculator-ss {
-    width: 400px;
-    height: 300px;
-    display: block;
-    object-fit: contain;
-    margin: 10px 20px 10px 0;
-    border: 3px solid #003366;
-}
-
-.password-generator-ss {
-    width: 400px;
-    height: 300px;
-    display: block;
-    object-fit: contain;
-    margin: 10px 20px 10px 0;
-    border: 3px solid #003366;
-}
-
-/* Contact Form Layout */
+/* Contact Form Framework */
 .contact-form-section {
     margin-top: 40px;
     padding-top: 20px;
@@ -306,16 +141,18 @@ section {
 
 .form-group label {
     font-weight: bold;
-    color: #003366; /* UniSZA Blue theme color */
+    color: #003366;
 }
 
 .form-group input, 
 .form-group textarea {
+    width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 1rem;
     font-family: inherit;
+    box-sizing: border-box;
 }
 
 .form-group input:focus, 
@@ -342,10 +179,40 @@ section {
     background-color: #002244;
 }
 
-/* Mobile adjust for full width button */
+/* ==========================================================================
+   4. MEDIA QUERIES (Responsive Fluid Layout Engine)
+   ========================================================================== */
+
+/* Tablet Optimization (768px down) */
+@media (max-width: 768px) {
+    main {
+        margin: 10px;
+        padding: 20px;
+    }
+}
+
+/* Mobile Phone Optimization (600px down) */
 @media (max-width: 600px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    nav a {
+        margin: 0;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 8px;
+        border-radius: 4px;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 1.6rem;
+    }
+
     .submit-btn {
         width: 100%;
-        align-self: stretch;
+        text-align: center;
     }
 }
