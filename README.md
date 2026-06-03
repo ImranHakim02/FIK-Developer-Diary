@@ -1,6 +1,6 @@
-# FIK Developer Diary
+# Personal Portfolio
 
-Personal portfolio and development log built for **CSD 34203 Special Topics in Software Development**.
+Personal portfolio and development log.
 
 ## Author Details
 - **Name:** Muhammad Imran Hakim Bin Abd Rashid
