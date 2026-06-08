@@ -52,16 +52,16 @@ Below are the production screenshots of systems developed during the course dura
 
 ---
 
-## 🚀 How to Run the Project Locally
+## 🚀 How to Run the Project
 
-To run this repository on your local computer infrastructure for inspection, follow these instructions:
+This project is fully deployed and can be run immediately without any local installation. 
 
-### Prerequisites
-Ensure your computer environment has a modern web browser installed (such as Google Chrome, Microsoft Edge, or Mozilla Firefox).
+### 1. Direct Production Execution (Recommended)
+Simply click the official live deployment link to run and test the portfolio instantly on any web browser:
+👉 **[https://ImranHakim02.github.io/FIK-Developer-Diary/](https://ImranHakim02.github.io/FIK-Developer-Diary/)**
 
-### Execution Instructions
-1. Download this entire repository zip file to your local computer (or clone the repository using Git).
-2. Navigate inside the folder directory containing the repository files.
-3. Locate the primary gateway routing file named **`index.html`**.
-4. Double-click the `index.html` file to automatically launch and run the portfolio application directly in your web browser.
-5. Use the header navigation links to transition across the application sub-pages seamlessly.
+### 2. Local Source Execution (Alternative/Offline)
+If you prefer to inspect or execute the raw code files locally on your machine:
+1. Download this repository as a `.zip` file from GitHub and extract it.
+2. Open the root folder directory.
+3. Locate and double-click the **`index.html`** file. It will automatically launch the portfolio application inside your default web browser.
